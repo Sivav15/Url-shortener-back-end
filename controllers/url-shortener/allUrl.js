@@ -2,7 +2,10 @@ const { UrlModel } = require("../../models/urlShort");
 
 const allUrl = async (req, res) => {
     try {
-         let data =  await UrlModel.find()
+         let v =  await UrlModel.find()
+
+     const data = v.filter((item)=> item.userId ==  req.params.id)
+
         res.json({
             message: "Url send successfull",
             statusCode: 200,

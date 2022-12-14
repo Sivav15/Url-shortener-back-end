@@ -12,6 +12,10 @@ const UrlSchema = mongoose.Schema({
     clickCount: {
         type: Number,
         default : 0
+    },
+    userId : {
+        type : String,
+        required: true
     }
 })
 

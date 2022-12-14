@@ -2,13 +2,14 @@ const { UrlModel } = require("../../models/urlShort");
 
 const createUrl = async (req, res) => {
     try {
-        const { longUrl } = req.body;
 
+        const { longUrl ,id} = req.body;
         let data = await UrlModel.findOne({ longUrl: longUrl })
         if (!data) {
             await UrlModel.create({
                 longUrl,
-                shortUrl: generateUrl()
+                shortUrl: generateUrl(),
+                userId : id
             })
             res.json({
                 message: "Url create successfull",
