@@ -9,7 +9,7 @@ const allUrl = async (req, res) => {
         res.json({
             message: "Url send successfull",
             statusCode: 200,
-            data:data.reverse()
+            datas:data.reverse()
         });
     } catch (error) {
         res.json({
