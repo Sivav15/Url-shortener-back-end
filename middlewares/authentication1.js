@@ -14,7 +14,7 @@ const authentication = (req,res,next)=>{
     } catch (error) {
       res.json({
         statusCode: 401,
-        message: "Your token is expiry",
+        message: "Your mail link expiry",
         error,
       })
     }
