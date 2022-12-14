@@ -5,7 +5,7 @@ const { login } = require("../controllers/auth/Login");
 const { passwordResetPage } = require("../controllers/auth/password-reset-page");
 const  { register } = require("../controllers/auth/register");
 
-const { authentication } = require("../middlewares/authentication");
+const { authentication } = require("../middlewares/authentication1");
 const router = express.Router();
 
 
