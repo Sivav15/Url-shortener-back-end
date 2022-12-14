@@ -12,7 +12,7 @@ const router = express.Router();
 
 
 router.post("/create-url",authentication,createUrl);
-router.get("/all-Url/:id",allUrl);
+router.get("/all-Url/:id",authentication,allUrl);
 router.get("/shortUrl/:shortUrl",shortUrl);
 router.delete("/delete-short/:id",authentication,deleteShortUrl)
 
